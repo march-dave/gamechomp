@@ -35,7 +35,7 @@ export default class gamechomp extends Component {
             </TouchableOpacity>
             
             <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
-            <View style={{width: 50, height: 50, backgroundColor: 'red'}} />
+            <View style={{width: 50, height: 50, backgroundColor: 'red', display: 'hidden'}} />
           </View>            
 
 
