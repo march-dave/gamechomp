@@ -34,8 +34,13 @@ export default class gamechomp extends Component {
               <View key={2} ref='myView' style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
             </TouchableOpacity>
             
-            <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
-            <View style={{width: 0, height: 0, backgroundColor: 'red'}} />
+            <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
+              <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
+              <View style={{width: 0, height: 0, backgroundColor: 'red'}} />
+            </TouchableOpacity>
           </View>            
 
 
