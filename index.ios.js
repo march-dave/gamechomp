@@ -18,8 +18,8 @@ import {
 export default class gamechomp extends Component {
 
     cleanGrid(e) {
-      Alert.alert('e');
-      console.log(e);
+      Alert.alert(e.nativeEvent.target.toString());
+      console.log(e.nativeEvent.target);
     }
 
     render() {
@@ -27,9 +27,13 @@ export default class gamechomp extends Component {
         
           <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
             <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
-              <View key={1} style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+              <View key={1} ref='myView' style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
             </TouchableOpacity>
-            <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+
+            <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
+              <View key={2} ref='myView' style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+            </TouchableOpacity>
+            
             <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
             <View style={{width: 50, height: 50, backgroundColor: 'red'}} />
           </View>            
