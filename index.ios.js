@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
     AppRegistry,
@@ -17,31 +11,31 @@ import {
 
 export default class gamechomp extends Component {
 
-    cleanGrid(e) {
+    GetGridInfo(e) {
       Alert.alert(e.nativeEvent.target.toString());
       console.log(e.nativeEvent);
     }
 
     render() {
-        return ( 
-        
+        return (
+
           <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-            <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
+            <TouchableOpacity onPress={this.GetGridInfo.bind(this)}>
               <View key={1} ref='myView' style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
+            <TouchableOpacity onPress={this.GetGridInfo.bind(this)}>
               <View key={2} style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
             </TouchableOpacity>
-            
-            <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
+
+            <TouchableOpacity onPress={this.GetGridInfo.bind(this)}>
               <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
+            <TouchableOpacity onPress={this.GetGridInfo.bind(this)}>
               <View style={{width: 0, height: 0, backgroundColor: 'red'}} />
             </TouchableOpacity>
-          </View>            
+          </View>
 
         );
     }
@@ -54,7 +48,7 @@ export default class gamechomp extends Component {
 //         alignItems: 'center',
 //         backgroundColor: '#F5FCFF',
 //     },
-   
+
 // });
 
 AppRegistry.registerComponent('gamechomp', () => gamechomp);
