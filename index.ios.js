@@ -19,7 +19,7 @@ export default class gamechomp extends Component {
 
     cleanGrid(e) {
       Alert.alert(e.nativeEvent.target.toString());
-      console.log(e.nativeEvent.target);
+      console.log(e.nativeEvent);
     }
 
     render() {
@@ -31,7 +31,7 @@ export default class gamechomp extends Component {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
-              <View key={2} ref='myView' style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+              <View key={2} style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
             </TouchableOpacity>
             
             <TouchableOpacity onPress={this.cleanGrid.bind(this)}>
@@ -42,8 +42,6 @@ export default class gamechomp extends Component {
               <View style={{width: 0, height: 0, backgroundColor: 'red'}} />
             </TouchableOpacity>
           </View>            
-
-
 
         );
     }
